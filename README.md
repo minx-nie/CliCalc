@@ -4,8 +4,7 @@
   <img src="https://img.shields.io/badge/C-99+-blue?logo=c" alt="C 99+">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License MIT">
   <img src="https://img.shields.io/badge/Type-CLI%20Tool-orange" alt="CLI Tool">
-  <a href="https://github.com/minx-nie"><img src="https://img.shields.io/badge/Maintainer-Thanh%20Nguyen-blueviolet?logo=github" alt="Maintainer: minx-nie"></a>
-</div>
+  <a href="https://github.com/minx-nie"><img src="https://img.shields.io/badge/Maintainer-minx--nie-blueviolet?logo=github" alt="Maintainer: minx-nie"></a>
 
 ---
 
