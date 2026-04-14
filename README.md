@@ -1,4 +1,4 @@
-# 🧮 CLICalc v2.1
+# 🧮 CLICalc
 
 <div align="center">
   <img src="https://img.shields.io/badge/C-99+-blue?logo=c" alt="C 99+">
@@ -22,6 +22,7 @@
   - [Core features](#core-features)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Roadmap](#roadmap)
 - [Tiếng Việt](#vietnamese)
   - [Tổng quan](#tổng-quan)
   - [Tính năng chính](#tính-năng-chính)
@@ -35,13 +36,14 @@
 ## 🇬🇧 English
 
 ### Overview
-**CLICalc** is a fast, minimalist CLI calculator. Designed for simplicity and speed, it allows you to type out continuous math expressions naturally without the distraction of a graphical interface.
+**CLICalc** is an advanced, minimalist CLI calculator. This version features a powerful expression engine that can parse and evaluate complex mathematical strings with nested parentheses and standard operator precedence.
 
 ### Core features
-* 🧠 **Smart Precedence:** Automatically applies correct mathematical rules (BODMAS/PEMDAS) so multiplication and division are handled before addition and subtraction.
-* 🔀 **Seamless Input:** Type naturally. Whether you need a quick 2-number calculation (`5 + 3`) or a 3-number expression (`5 + 3 * 2`), the calculator adapts instantly.
-* 🛡️ **Bulletproof Reliability:** Built-in safeguards prevent the application from crashing during invalid mathematical operations like dividing by zero.
-* ⚡ **High Precision:** Delivers accurate decimal results for all your floating-point calculations.
+* 📦 **Complex Expressions:** Supports infinitely long math strings. No more simple 2-number limits.
+* 괄호 **Parentheses Support:** Fully handles nested brackets like `(5 + 3) * (10 / 2)` with perfect accuracy.
+* 🧠 **Smart Math Engine:** Automatically prioritizes multiplication and division over addition and subtraction (BODMAS/PEMDAS).
+* 🔄 **Continuous Workflow:** Run the app once and perform as many calculations as you want in a single session.
+* 🛡️ **Zero-Crash Guard:** Intelligent error handling for invalid syntax or division-by-zero attempts.
 
 ### Installation
 ```bash
@@ -55,14 +57,23 @@ gcc main.c -o clicalc
 
 ### Usage
 
-Run the compiled executable directly in your terminal:
+Run the executable and type your expression:
 
 ```bash
 ./clicalc
 ```
 
-**Example:** `Nhap bieu thuc: 2 + 3 * 4` -\> `Result: 14.00`
+**Example:** `Enter an expression: (10 + 5) * 2 / 3` -\> `Result: 10.00`
 
+-----
+
+
+### 🚀 Roadmap
+
+  - [x] v1.0: Basic 2-number arithmetic.
+  - [x] v2.0: Dynamic input length detection (2-3 operands).
+  - [x] v3.0: Full expression parsing & Parentheses support.
+  - [ ] v4.0: Support for advanced math functions (`sqrt`, `pow`, `sin`, `cos`).
 -----
 
 \<a id="vietnamese"\>\</a\>
@@ -71,14 +82,15 @@ Run the compiled executable directly in your terminal:
 
 ### Tổng quan
 
-**CLICalc v2.1** là một máy tính giao diện dòng lệnh siêu nhẹ. Được thiết kế tối giản và tập trung vào tốc độ, công cụ này cho phép bạn gõ trực tiếp các phép toán một cách tự nhiên nhất mà không cần đến giao diện đồ họa.
+**CLICalc** là một máy tính giao diện dòng lệnh (CLI) mạnh mẽ và tối giản. Phiên bản này sở hữu bộ nòng xử lý biểu thức cho phép bạn tính toán các chuỗi toán học phức tạp, bao gồm cả các dấu ngoặc lồng nhau và quy tắc ưu tiên toán tử chuẩn quốc tế.
 
 ### Tính năng chính
 
-  * 🧠 **Tính toán thông minh:** Tự động hiểu và áp dụng đúng quy tắc ưu tiên toán học (nhân chia trước, cộng trừ sau).
-  * 🔀 **Nhập liệu tự nhiên:** Thoải mái gõ phép tính liền mạch. Dù bạn nhập 2 số (`5 + 3`) hay 3 số (`5 + 3 * 2`), ứng dụng đều tự động nhận diện và xử lý mượt mà.
-  * 🛡️ **Chống treo máy:** Tích hợp cơ chế bảo vệ an toàn, ngăn chặn việc văng ứng dụng khi người dùng vô tình thực hiện các phép toán vô lý (như chia cho 0).
-  * ⚡ **Độ chính xác cao:** Trả về kết quả thập phân chuẩn xác cho mọi phép tính của bạn.
+  * 📦 **Biểu thức phức tạp:** Không còn giới hạn 2 hay 3 con số. Bạn có thể nhập một chuỗi dài bất tận để tính toán một lúc.
+  * 괄호 **Hỗ trợ dấu ngoặc:** Xử lý chuẩn xác các biểu thức có dấu ngoặc đơn lồng nhau như `((5 + 3) * 2) / 4`.
+  * 🧠 **Ưu tiên toán tử:** Tự động áp dụng quy tắc "nhân chia trước, cộng trừ sau" một cách thông minh.
+  * 🔄 **Vòng lặp liên tục:** Tính toán không giới hạn trong một phiên làm việc mà không cần khởi động lại ứng dụng.
+  * 🛡️ **Bảo vệ an toàn:** Chống treo terminal và ngăn chặn lỗi khi người dùng nhập sai cú pháp hoặc chia cho số 0.
 
 ### Cài đặt
 
@@ -93,13 +105,13 @@ gcc main.c -o clicalc
 
 ### Cách dùng
 
-Khởi chạy file thực thi vừa được biên dịch trên terminal của bạn:
+Khởi chạy file thực thi và nhập phép tính của bạn:
 
 ```bash
 ./clicalc
 ```
 
-**Ví dụ:** `Nhap bieu thuc: 2 + 3 * 4` -\> `Result: 14.00`
+**Ví dụ:** `Nhap bieu thuc: (10 + 5) * 2 / 3` -\> `Result: 10.00`
 
 -----
 

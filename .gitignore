@@ -1,21 +1,14 @@
+clicalc
+main.exe
 *.exe
 *.out
-*.app
-clicalc
+a.out
 
 *.o
 *.obj
 
 .vscode/
-
-build/
-bin/
-obj/
+.history/
 
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
