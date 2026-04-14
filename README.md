@@ -1,4 +1,4 @@
-# 🧮 CLICalc
+# 🧮 CLICalc v2.1
 
 <div align="center">
   <img src="https://img.shields.io/badge/C-99+-blue?logo=c" alt="C 99+">
@@ -22,13 +22,11 @@
   - [Core features](#core-features)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Roadmap (v2.0)](#roadmap-v20)
 - [Tiếng Việt](#vietnamese)
   - [Tổng quan](#tổng-quan)
   - [Tính năng chính](#tính-năng-chính)
   - [Cài đặt](#cài-đặt)
   - [Cách dùng](#cách-dùng)
-  - [Kế hoạch phát triển (v2.0)](#kế-hoạch-phát-triển-v20)
 
 ---
 
@@ -37,55 +35,33 @@
 ## 🇬🇧 English
 
 ### Overview
-
-**CLICalc** is a minimalist, zero-dependency Command Line Interface (CLI) Calculator written entirely in C. Designed for developers and terminal enthusiasts, it provides a continuous, fast, and interactive menu loop for basic arithmetic without the bloat of a graphical user interface.
+**CLICalc** is a fast, minimalist CLI calculator. Designed for simplicity and speed, it allows you to type out continuous math expressions naturally without the distraction of a graphical interface.
 
 ### Core features
-
-* ⚡ **Lightning Fast:** Compiled directly to machine code, taking up virtually zero system resources.
-* 🔄 **Continuous REPL:** Uses a `do-while` loop to let you perform multiple calculations in one session.
-* 🛡️ **Failsafe:** Built-in error handling to strictly prohibit mathematical errors like division by zero.
-* 📦 **Standalone:** Only relies on standard C libraries (`stdio.h`). No external dependencies required.
+* 🧠 **Smart Precedence:** Automatically applies correct mathematical rules (BODMAS/PEMDAS) so multiplication and division are handled before addition and subtraction.
+* 🔀 **Seamless Input:** Type naturally. Whether you need a quick 2-number calculation (`5 + 3`) or a 3-number expression (`5 + 3 * 2`), the calculator adapts instantly.
+* 🛡️ **Bulletproof Reliability:** Built-in safeguards prevent the application from crashing during invalid mathematical operations like dividing by zero.
+* ⚡ **High Precision:** Delivers accurate decimal results for all your floating-point calculations.
 
 ### Installation
-
 ```bash
 # Clone the repository
 git clone [https://github.com/minx-nie/clicalc.git](https://github.com/minx-nie/clicalc.git)
 cd clicalc
 
-# Compile using GCC
+# Compile the code
 gcc main.c -o clicalc
 ````
 
 ### Usage
 
-Run the compiled executable directly in your terminal.
+Run the compiled executable directly in your terminal:
 
-| OS | Command | Description |
-| --- | --- | --- |
-| **Linux / macOS** | `./clicalc` | Executes the binary in Unix-like environments |
-| **Windows** | `clicalc.exe` | Executes the program in Command Prompt or PowerShell |
-
-**Example Interaction:**
-
-```text
-===== Calculator =====
-1. Addition (+)
-2. Subtraction (-)
-3. Multiplication (*)
-4. Division (/)
-5. Exit
-Enter your choice: 3
-Enter two numbers: 5.5 2
-Result: 11.00
+```bash
+./clicalc
 ```
 
-### Roadmap (v2.0)
-
-  - [ ] Implement string parsing for complex expressions (e.g., `5 + 3 * (2 - 8)`).
-  - [ ] Add support for mathematical constants (Pi, e).
-  - [ ] Add exponentiation and square root functions.
+**Example:** `Nhap bieu thuc: 2 + 3 * 4` -\> `Result: 14.00`
 
 -----
 
@@ -95,14 +71,14 @@ Result: 11.00
 
 ### Tổng quan
 
-**CLICalc** là một ứng dụng Máy tính giao diện dòng lệnh (CLI) tối giản, không phụ thuộc thư viện ngoài và được viết hoàn toàn bằng C. Được thiết kế dành cho lập trình viên và những người hệ "nghiện" terminal, công cụ này cung cấp một vòng lặp tương tác tốc độ cao để thực hiện các phép toán cơ bản mà không cần đến giao diện đồ hoạ cồng kềnh.
+**CLICalc v2.1** là một máy tính giao diện dòng lệnh siêu nhẹ. Được thiết kế tối giản và tập trung vào tốc độ, công cụ này cho phép bạn gõ trực tiếp các phép toán một cách tự nhiên nhất mà không cần đến giao diện đồ họa.
 
 ### Tính năng chính
 
-  * ⚡ **Siêu nhẹ và nhanh:** Biên dịch trực tiếp ra mã máy, hầu như không tiêu tốn tài nguyên hệ thống.
-  * 🔄 **Vòng lặp tương tác:** Sử dụng cấu trúc `do-while` cho phép tính toán liên tục nhiều lần trong một phiên làm việc.
-  * 🛡️ **Bảo vệ lỗi:** Tích hợp sẵn cơ chế chặn các lỗi toán học cơ bản (ví dụ: chia cho số 0).
-  * 📦 **Độc lập:** Chỉ sử dụng thư viện C tiêu chuẩn (`stdio.h`). Tuyệt đối không cần cài cắm thêm bất kỳ dependencies nào.
+  * 🧠 **Tính toán thông minh:** Tự động hiểu và áp dụng đúng quy tắc ưu tiên toán học (nhân chia trước, cộng trừ sau).
+  * 🔀 **Nhập liệu tự nhiên:** Thoải mái gõ phép tính liền mạch. Dù bạn nhập 2 số (`5 + 3`) hay 3 số (`5 + 3 * 2`), ứng dụng đều tự động nhận diện và xử lý mượt mà.
+  * 🛡️ **Chống treo máy:** Tích hợp cơ chế bảo vệ an toàn, ngăn chặn việc văng ứng dụng khi người dùng vô tình thực hiện các phép toán vô lý (như chia cho 0).
+  * ⚡ **Độ chính xác cao:** Trả về kết quả thập phân chuẩn xác cho mọi phép tính của bạn.
 
 ### Cài đặt
 
@@ -117,34 +93,15 @@ gcc main.c -o clicalc
 
 ### Cách dùng
 
-Khởi chạy file thực thi vừa được biên dịch trực tiếp trên terminal của bạn.
+Khởi chạy file thực thi vừa được biên dịch trên terminal của bạn:
 
-| Hệ điều hành | Lệnh | Chú thích |
-| --- | --- | --- |
-| **Linux / macOS** | `./clicalc` | Chạy file thực thi trên môi trường Unix/Linux |
-| **Windows** | `clicalc.exe` | Chạy chương trình trên CMD hoặc PowerShell |
-
-**Ví dụ nhập xuất:**
-
-```text
-===== Calculator =====
-1. Addition (+)
-2. Subtraction (-)
-3. Multiplication (*)
-4. Division (/)
-5. Exit
-Enter your choice: 3
-Enter two numbers: 5.5 2
-Result: 11.00
+```bash
+./clicalc
 ```
 
-### Kế hoạch phát triển (v2.0)
-
-  - [ ] Xây dựng thuật toán phân tích chuỗi để tính biểu thức dài (VD: `5 + 3 * (2 - 8)`).
-  - [ ] Bổ sung hằng số toán học cơ bản (Pi, e).
-  - [ ] Thêm tính năng tính số mũ và căn bậc hai.
+**Ví dụ:** `Nhap bieu thuc: 2 + 3 * 4` -\> `Result: 14.00`
 
 -----
 
-*Giấy phép MIT — Tác giả: **minx-nie***
+*MIT License — Maintained by **minx-nie***
 
